@@ -1,16 +1,12 @@
 import React from 'react';
+import Banner from './Banner';
 
 function SalesContent() {
   return (
     <div className='flex flex-col m-4'>
-    <div className="bg-[#E6F2FF] py-4 px-6 text-center rounded-md ">
-      <p className="text-lg text-blue-700">
-        Enjoy customizable templates, GST reports, and premium support! ⭐⭐⭐
-        <span className="ml-2 font-medium bg-white border-2 border-slate-200 p-2 rounded-3xl">Subscribe Now! 🚀</span>
-      </p>
-    </div>
+    <Banner/>
     <div className="mt-4 h-full">
-      <div className="bg-white shadow rounded-lg">
+      <div className="bg-white shadow rounded-lg h-full">
         <div className="px-4 py-5 sm:p-6">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-xl font-semibold text-gray-900">Sales</h2>
@@ -26,8 +22,8 @@ function SalesContent() {
               </button>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-8">
-            <div>
+          <div className="grid grid-cols-2 gap-8 pr-[200px] pl-[150px] pt-10">
+            <div> 
               <img src="https://vx-erp-resources.s3.ap-south-1.amazonaws.com/experience/sales.webp" alt="Invoice creation illustration" className="w-full" />
             </div>
             <div className='p-10'>
