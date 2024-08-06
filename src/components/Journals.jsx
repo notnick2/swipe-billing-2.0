@@ -6,13 +6,10 @@ import { faHeadphones } from '@fortawesome/free-solid-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 
-function Expenses() {
+function Journals() {
 
   const features = [
-    "Track all of your business Expenses in one place",
-    "Easily record your Expenses across various categories",
-    "Discover business insights through Expense report"
-
+  
   ];
 
   return (
@@ -22,14 +19,14 @@ function Expenses() {
       <div className="bg-white shadow rounded-lg h-full">
         <div className="px-4 py-5 sm:p-6">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">Expenses</h2>
+            <h2 className="text-2xl font-bold text-gray-900">Journals</h2>
             <div className="space-x-2">
               <button className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
-                Expense Categories
+                Journal Categories
               </button>
               
               <button className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700">
-                + Create Expense
+                + New Journal
               </button>
             </div>
           </div>
@@ -38,8 +35,8 @@ function Expenses() {
               <img src="https://vx-erp-resources.s3.ap-south-1.amazonaws.com/experience/expenses.webp" alt="Invoice creation illustration" className="w-full" />
             </div>
             <div className=''>
-              <h3 className="text-2xl font-bold mb-4 pb-1">All your Expenses at one place.</h3>
-              <p className="text-gray-600 mb-4 pb-1">Simplify your business expenses to gain valuable insights and make better decisions.</p>
+              <h3 className="text-2xl font-bold mb-4 pb-1">Add a Journal Now</h3>
+              <p className="text-gray-600 mb-4 pb-1"></p>
                 {features.map((feature, index) => (
                   <div key={index} style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }} className='pb-1'>
                     <FontAwesomeIcon icon={faCircleCheck} style={{ marginRight: '10px' }} />
@@ -48,7 +45,7 @@ function Expenses() {
                 ))}
               
               <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                + Record your Expense
+                + New Journal
               </button>
               <div className="mt-4 text-sm">
               <FontAwesomeIcon icon={faHeadphones} style={{ marginRight: '10px', color: '#4a5568' }} />
@@ -67,4 +64,4 @@ function Expenses() {
   );
 }
 
-export default Expenses;
+export default Journals;

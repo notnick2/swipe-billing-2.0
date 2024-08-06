@@ -1,51 +1,65 @@
 import React, { useState } from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Content from './components/Content';
-/*
-import Sales from './components/Sales';
-import Purchases from './components/Purchases';
-import Quotations from './components/Quotations';
-import Expenses from './components/Expenses';
-import ProductsAndServices from './components/ProductsAndServices';
-import Inventory from './components/Inventory';
-import Payments from './components/Payments';
+import CreditNotes from './components/CreditNotes';
 import Customers from './components/Customers';
-import Vendors from './components/Vendors';
-import Insights from './components/Insights';
-import Reports from './components/Reports';
+import DebitNotes from './components/DebitNotes';
+import DeliveryChallans from './components/DeliveryChallans';
+import Einvoices from './components/E-invoices';
 import EWayBills from './components/EWayBills';
-import OnlineStore from './components/OnlineStore';
-import MyDrive from './components/MyDrive';
-import Settings from './components/Settings';
-import Tutorials from './components/Tutorials';
-import Feedback from './components/Feedback';
+import Expenses from './components/Expenses';
+import Warehouses from './components/Warehouses';
+import Vendors from './components/Content';
+import InventoryTimeline from './components/Timeline';
+import Subscriptions from './components/Subscriptions';
+import Settlements from './components/Settlements';
+import Quotations from './components/Quotations';
+import Purchases from './components/Purchases';
+import PurchaseOrders from './components/PurchaseOrders';
+import ProFormaInvoices from './components/ProFormaInvoices';
+import ProductsAndServices from './components/ProductAndServices';
+import PaymentTimeline from './components/PaymentTimeline';
+import PaymentLinks from './components/PaymentLinks';
+import Journals from './components/Journals';
+import Invoices from './components/Invoices';
+import IndirectIncome from './components/IndirectIncome';
 
 const router = createBrowserRouter([
-  { path: "/", element: <Content /> },
-  { path: "/sales", element: <Sales /> },
-  { path: "/purchases", element: <Purchases /> },
-  { path: "/quotations", element: <Quotations /> },
-  { path: "/expenses", element: <Expenses /> },
-  { path: "/productsandservices", element: <ProductsAndServices /> },
-  { path: "/inventory", element: <Inventory /> },
-  { path: "/payments", element: <Payments /> },
-  { path: "/customers", element: <Customers /> },
-  { path: "/vendors", element: <Vendors /> },
-  { path: "/insights", element: <Insights /> },
-  { path: "/reports", element: <Reports /> },
-  { path: "/ewaybills", element: <EWayBills /> },
-  { path: "/onlinestore", element: <OnlineStore /> },
-  { path: "/mydrive", element: <MyDrive /> },
-  { path: "/settings", element: <Settings /> },
-  { path: "/tutorials", element: <Tutorials /> },
-  { path: "/feedback", element: <Feedback /> }
-]); */
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      { path: "/", element: <Content /> },
+      { path: "/creditnotes", element: <CreditNotes /> },
+      { path: "/customers", element: <Customers /> },
+      { path: "/debitnotes", element: <DebitNotes /> },
+      { path: "/deliverychallans", element: <DeliveryChallans /> },
+      { path: "/e-invoices", element: <Einvoices /> },
+      { path: "/e-waybills", element: <EWayBills /> },
+      { path: "/expenses", element: <Expenses /> },
+      { path: "/warehouses", element: <Warehouses /> },
+      { path: "/vendors", element: <Vendors /> },
+      { path: "/timeline", element: <InventoryTimeline /> },
+      { path: "/subscriptions", element: <Subscriptions /> },
+      { path: "/settlements", element: <Settlements /> },
+      { path: "/quotations", element: <Quotations /> },
+      { path: "/purchases", element: <Purchases /> },
+      { path: "/purchaseorders", element: <PurchaseOrders /> },
+      { path: "/proforminvoices", element: <ProFormaInvoices /> },
+      { path: "/products&services", element: <ProductsAndServices /> },
+      { path: "/timline", element: <PaymentTimeline /> },
+      { path: "/paymentlinks", element: <PaymentLinks /> },
+      { path: "/journals", element: <Journals /> },
+      { path: "/invoices", element: <Invoices /> },
+      { path: "/indirectincome", element: <IndirectIncome /> },
+    ],
+  },
+]);
 
-function App() {
+function Layout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const toggleSidebar = () => {
@@ -53,19 +67,20 @@ function App() {
   };
 
   return (
-    <Router>
-      <div className="flex flex-col h-screen">
-        <Header />
-        <div className="flex flex-1 overflow-hidden bg-[#f9f9f9]">
-          <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-          <Content/>
-          {/*<div className="flex-1 overflow-y-auto p-4">
-            {/* Routes will be rendered here }
-          </div> */}
-        </div>
+    <div className="flex flex-col h-screen">
+      <Header />
+      <div className="flex flex-1 overflow-hidden bg-[#f9f9f9]">
+        <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+        
+          <Outlet />
+      
       </div>
-    </Router>
+    </div>
   );
+}
+
+function App() {
+  return <RouterProvider router={router} />;
 }
 
 export default App;
