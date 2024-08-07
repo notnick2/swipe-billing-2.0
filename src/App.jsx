@@ -26,6 +26,10 @@ import PaymentLinks from './components/PaymentLinks';
 import Journals from './components/Journals';
 import Invoices from './components/Invoices';
 import IndirectIncome from './components/IndirectIncome';
+import Tutorials from './components/Tutorials';
+import Insights from './components/Insights';
+import Settings from './components/Settings';
+import InProgress from './components/Reports';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +59,12 @@ const router = createBrowserRouter([
       { path: "/journals", element: <Journals /> },
       { path: "/invoices", element: <Invoices /> },
       { path: "/indirectincome", element: <IndirectIncome /> },
+      { path: "/tutorials", element: <Tutorials />},
+      { path: "/insights", element: <Insights />},
+      { path: "/reports", element: <InProgress/>},
+      { path: "/settings", element: <InProgress/>},
+      { path: "/onlinestore", element: <InProgress/>},
+      { path: "/mydrive", element: <InProgress/>},
     ],
   },
 ]);
@@ -71,9 +81,7 @@ function Layout() {
       <Header />
       <div className="flex flex-1 overflow-hidden bg-[#f9f9f9]">
         <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-        
           <Outlet />
-      
       </div>
     </div>
   );
