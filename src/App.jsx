@@ -30,6 +30,7 @@ import Tutorials from './components/Tutorials';
 import Insights from './components/Insights';
 import Settings from './components/Settings';
 import InProgress from './components/Reports';
+import Feedback from './components/Feedback';
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,7 @@ const router = createBrowserRouter([
       { path: "/settings", element: <InProgress/>},
       { path: "/onlinestore", element: <InProgress/>},
       { path: "/mydrive", element: <InProgress/>},
+      { path: "/feedback", element: <Feedback/>}
     ],
   },
 ]);
