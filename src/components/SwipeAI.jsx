@@ -47,7 +47,7 @@ const AIChat = () => {
 
   useEffect(() => {
     const initialMessages = [
-      { isUser: false, text: 'Hi! Here are some questions you can ask:' },
+      { isUser: false, text: '                Thank you so much for taking time to looking at my work for your organization. I have been working for over 3 weeks despite continuous examinations trying to prove my capabilities to get an internship at Swipe.  always wanted to work at a YC startup and after discovering such a startup from hyderabad there is no way i cannot put my blood and sweat to experience working with a startup like yourself. this web app is the proof of my capabilities, responsibiliy and passion towards working at swipe. please give me one opportunity , it always starts with one opportunity just remember that someone has gave you a chance, a chance which made you what you are today! I really believe in working hard and surrounding among amazing people but unfortunately i didnt get any opportunity to be in amazing environments where my passion and capabilities can be tested at the fullest. I\'m going to 3rd year next month and i will be offered an NOC to do an internship by our college , so this is the best time i can work for someone as amazing as swipe.   Here are some questions you can ask:' },
     ];
     setMessages(initialMessages);
   }, []);

@@ -111,7 +111,7 @@ const Feedback = () => {
             />
             <textarea
               placeholder={activeTab === 'feedback' 
-                ? "Please provide your feedback here, looking forward to hear from you "
+                ? "Please provide your feedback here, looking forward to hear from you. This feedback works so feel free to try it out "
                 : "Please describe your issue or question in detail. We'll get back to you as soon as possible."
               }
               value={message}
