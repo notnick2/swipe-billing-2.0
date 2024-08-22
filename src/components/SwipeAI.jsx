@@ -3,7 +3,7 @@ import { OpenAI } from "openai";
 
 const openai = new OpenAI({
  // apiKey : import.meta.env.VITE_OPENAI_API_KEY,
-  apiKey : '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',
+  apiKey : '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',
   dangerouslyAllowBrowser: true
 });
 
