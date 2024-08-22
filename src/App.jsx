@@ -31,6 +31,8 @@ import Insights from './components/Insights';
 import Settings from './components/Settings';
 import InProgress from './components/Reports';
 import Feedback from './components/Feedback';
+import Bfeedback from './components/Bfeedback';
+import AIChat from './components/SwipeAI';
 
 const router = createBrowserRouter([
   {
@@ -66,7 +68,9 @@ const router = createBrowserRouter([
       { path: "/settings", element: <InProgress/>},
       { path: "/onlinestore", element: <InProgress/>},
       { path: "/mydrive", element: <InProgress/>},
-      { path: "/feedback", element: <Feedback/>}
+      { path: "/feedback", element: <Feedback/>},
+      { path: "/bfeedback", element: <Bfeedback/>},
+      { path: "/swipeAI", element: <AIChat/>}
     ],
   },
 ]);

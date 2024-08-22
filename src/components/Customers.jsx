@@ -4,8 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faHeadphones } from '@fortawesome/free-solid-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
-
-
+import { Link } from 'react-router-dom';
 const SearchInput = () => {
     return (
       <div className='flex flex-row'>
@@ -27,9 +26,9 @@ const SearchInput = () => {
           />
         </div>
       </div>
-        <button className="ml-4 px-4 py-2 border border-transparent rounded-md shadow-sm text-md font-medium text-white bg-blue-600 hover:bg-blue-700">
+        <Link className="ml-4 px-4 py-2 border border-transparent rounded-md shadow-sm text-md font-medium text-white bg-blue-600 hover:bg-blue-700" to = {'/bfeedback'}>
           + New Customer
-        </button>
+        </Link>
         </div>
     );
   };
@@ -69,9 +68,9 @@ function Customers() {
                   </div>
                 ))}
               
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              <Link className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" to = {'/bfeedback'}>
                 + Start adding your customers
-              </button>
+              </Link>
               <div className="mt-4 text-sm">
               <FontAwesomeIcon icon={faHeadphones} style={{ marginRight: '10px', color: '#4a5568' }} />
                 <a href="#" className="text-gray-500 hover:text-gray-600">Talk to a specialist</a>

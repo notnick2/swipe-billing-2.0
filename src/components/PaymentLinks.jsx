@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faHeadphones } from '@fortawesome/free-solid-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
-
+import { Link } from 'react-router-dom';
 
 function PaymentLinks() {
 
@@ -38,9 +38,9 @@ return (
                 </div>
                 ))}
             
-            <button className="bg-blue-600 hover:bg-blue-700 width-full text-white font-bold py-2 px-4 rounded">
+            <Link className="bg-blue-600 hover:bg-blue-700 width-full text-white font-bold py-2 px-4 rounded" to = {'/bfeedback'}>
                 + Start receiving payments
-            </button>
+            </Link>
             <div className="mt-4 text-sm">
             <FontAwesomeIcon icon={faHeadphones} style={{ marginRight: '10px', color: '#4a5568' }} />
                 <a href="#" className="text-gray-500 hover:text-gray-600">Talk to a specialist</a>

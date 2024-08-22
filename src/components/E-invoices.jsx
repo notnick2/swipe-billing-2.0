@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faHeadphones } from '@fortawesome/free-solid-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
-
+import { Link } from 'react-router-dom';
 
 function Einvoices() {
 
@@ -24,9 +24,9 @@ function Einvoices() {
             <h2 className="text-2xl font-bold text-gray-900">E-Invoicing</h2>
             <div className="space-x-2">
               
-              <button className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700">
+              <Link className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700" to = {'/bfeedback'}>
                 Connect to E-invoicing Portal
-              </button>
+              </Link>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8 pr-[200px] pl-[150px] pt-10">
@@ -43,9 +43,9 @@ function Einvoices() {
                   </div>
                 ))}
               
-              <button className="p-1 bg-[#FFD30E] hover:border-[#fcd217] text-black font-bold rounded-md">
+              <Link className="p-1 bg-[#FFD30E] hover:border-[#fcd217] text-black font-bold rounded-md" to = {'/bfeedback'}>
                 Upgrade Now 🚀
-              </button>
+              </Link>
               <div className="mt-4 text-sm">
               <FontAwesomeIcon icon={faHeadphones} style={{ marginRight: '10px', color: '#4a5568' }} />
                 <a href="#" className="text-gray-500 hover:text-gray-600">Talk to a specialist</a>

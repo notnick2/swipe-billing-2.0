@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaBolt, FaBell, FaBullhorn, FaUserCircle } from "react-icons/fa";
+
 
 function Header() {
   return (
@@ -15,14 +17,15 @@ function Header() {
         </div>
       </div>
       <div className="flex items-center space-x-4">
-        <i className="fas fa-bolt"></i>
-        <i className="fas fa-bell"></i>
-        <i className="fas fa-question-circle"></i>
-        <i className="fas fa-user-circle"></i>
-      </div>
+<FaBolt className="text-gray-600" />
+<FaBell className="text-gray-600" />
+<FaBullhorn className="text-gray-600" />
+<FaUserCircle className="text-gray-600" />
+</div>
     </header>
     </>
   );
 }
 
 export default Header;
+

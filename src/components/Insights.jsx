@@ -2,7 +2,7 @@ import React from 'react';
 
 const Insights = () => {
   return (
-    <div className='w-full ml-[-100px]'>
+    <div className='w-full m-4'>
     <div className="p-6 bg-white w-full">
       <h1 className="text-2xl font-bold mb-4">Insights</h1>
       

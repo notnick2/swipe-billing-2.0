@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import emailjs from 'emailjs-com';
 
 const Feedback = () => {
@@ -50,9 +50,9 @@ const Feedback = () => {
       
       {/* Modal content */}
       <div className="fixed inset-0 flex items-center justify-center z-50">
-        <div className="bg-white p-6 rounded-lg w-full max-w-md mx-4">
+        <div className="bg-white p-6 rounded-lg w-full mx-4">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-xl font-bold">Contact Swipe Support</h2>
+            <h2 className="text-xl text-gray-950 font-bold">Thankyou so much please please read the below </h2>
             <button onClick={handleClose} className="text-gray-500 text-2xl">&times;</button>
           </div>
           <div className="mb-4">
@@ -75,27 +75,27 @@ const Feedback = () => {
                     : 'text-gray-500'
                 }`}
               >
-                Contact Us
+                Contact Me
               </button>
             </div>
             {activeTab === 'feedback' && (
               <p className="text-sm text-gray-600 mb-4">
-                Like Swipe or have any feedback for us? Use the form below to send us your comments or
-                report any problems you experienced using the app. We read all feedback carefully, and do our
-                best to improve the app every day!
+                Thank you so much for taking time to looking at my work for your organization. I have been working for over 3 weeks despite continuous examinations trying to prove my capabilities to get an internship at Swipe.  always wanted to work at a YC startup and after discovering such a startup from hyderabad there is no way i cannot put my blood and sweat to experience working with a startup like yourself. this web app is the proof of my capabilities, responsibiliy and passion towards working at swipe. please give me one opportunity , it always starts with one opportunity just remember that someone has gave you a chance, a chance which made you what you are today! I really believe in working hard and surrounding among amazing people but unfortunately i didnt get any opportunity to be in amazing environments where my passion and capabilities can be tested at the fullest. I'm going to 3rd year next month and i will be offered an NOC to do an internship by our college , so this is the best time i can work for someone as amazing as swipe.   
+                <span className='font-semibold'>
+                    Please checkout <Link to="/swipeAI" className='underline'>SwipeAI</Link> It is amazing.
+                </span>
               </p>
             )}
             {activeTab === 'contact' && (
               <p className="text-sm text-gray-600 mb-4">
-                Need to get in touch with our support team? Use this form to contact us directly.
-                We'll get back to you as soon as possible.
+                
               </p>
             )}
           </div>
           <form onSubmit={handleSubmit}>
             <input
               type="email"
-              placeholder="varun123024@gmail.com"
+              placeholder="varun024123@gmail.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full p-2 mb-4 border rounded bg-gray-100"
@@ -111,7 +111,7 @@ const Feedback = () => {
             />
             <textarea
               placeholder={activeTab === 'feedback' 
-                ? "Please provide your feedback here, describing it in detail. If possible, include screenshots or links to help us evaluate it more efficiently."
+                ? "Please provide your feedback here, looking forward to hear from you "
                 : "Please describe your issue or question in detail. We'll get back to you as soon as possible."
               }
               value={message}
@@ -120,12 +120,10 @@ const Feedback = () => {
               required
             />
             <div className="flex justify-between items-center">
-              <button type="button" className="flex items-center bg-gray-200 text-gray-700 px-4 py-2 rounded">
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4"></path>
-                </svg>
-                Upload
-              </button>
+              <a type="button" target="_blank" className="flex items-center bg-gray-200 text-gray-700 px-4 py-2 rounded" href="https://drive.google.com/file/d/12UKYl8KWFsfafwlVYU1uFFGi4ca4MZp2/view?usp=sharing">
+                
+                Resume
+              </a>
             
               <button 
                 type="submit" 
