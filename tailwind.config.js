@@ -21,7 +21,7 @@ export default {
         6: '24px',
       },
       width: {
-        '1/5': '25%', // Custom class for 1/6th width
+        '1/5': '12%', // Custom class for 1/6th width
         '1/3':'80%',
       },
     },
