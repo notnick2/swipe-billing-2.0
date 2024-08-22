@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+/*import React, { useState, useEffect } from 'react';
 import { OpenAI } from "openai";
 
 const openai = new OpenAI({
- // apiKey : import.meta.env.VITE_OPENAI_API_KEY,
-  apiKey : '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',
+  apiKey : import.meta.env.VITE_OPENAI_API_KEY,
   dangerouslyAllowBrowser: true
 });
 
@@ -145,8 +144,8 @@ const AIChat = () => {
 
 export default AIChat;
 
+*/
 
-/*
 import React, { useState, useEffect } from 'react';
 
 const ChatGPTResponse = ({ response }) => {
@@ -190,7 +189,7 @@ const AIChat = () => {
     if (message.trim() !== '') {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:5000/chat', {
+        const response = await fetch('https://swipe-billing-backend.netlify.app/.netlify/functions/server', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -264,4 +263,3 @@ const AIChat = () => {
 
 export default AIChat;
 
-*/
