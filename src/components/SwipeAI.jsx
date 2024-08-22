@@ -41,7 +41,7 @@ const AIChat = () => {
     if (message.trim() !== '') {
       setLoading(true);
       try {
-        const response = await fetch(import.meta.env.VITE_BACKEND_URL, {
+        const response = await fetch('https://late-fog-e895.varun123024.workers.dev/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
