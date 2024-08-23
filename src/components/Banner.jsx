@@ -5,7 +5,7 @@ function Banner() {
 
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate('/bfeedback');
+    navigate('/swipeAI');
   };
 
   return (
