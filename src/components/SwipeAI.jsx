@@ -37,17 +37,18 @@ const AIChat = () => {
   const [loading, setLoading] = useState(false);
 
   const questionBuffer = [
-    "What is React?", "How does useState work?", "What is useEffect?", 
-    "Explain closures in JS", "What is the Virtual DOM?", 
-    "What is JSX?", "What are React hooks?", "Explain context in React",
-    "What is the difference between state and props?", "How do you optimize a React app?"
+    "cash in and cash out for this month",
+    "how many products did we sold this month", "how many active customers do we have", "What is the value of total pending invoices", 
+    "total sales and expenses for this month", "what were the top categories by sales we had ?", 
+    "what was the top best selling product by sales", "do we have any low inventory products? ", "what were the peek performing days",
+    "who is our top customer by sales", "how much is our current recurring revenue","list out all the vendors that we have", "generate a price quotation for 100 macbook pro"
   ];
 
   const [displayedQuestions, setDisplayedQuestions] = useState(questionBuffer.slice(0, 5));
 
   useEffect(() => {
     const initialMessages = [
-      { isUser: false, text: '                Thank you so much for taking time to looking at my work for your organization. I have been working for over 3 weeks despite continuous examinations trying to prove my capabilities to get an internship at Swipe.  always wanted to work at a YC startup and after discovering such a startup from hyderabad there is no way i cannot put my blood and sweat to experience working with a startup like yourself. this web app is the proof of my capabilities, responsibiliy and passion towards working at swipe. please give me one opportunity , it always starts with one opportunity just remember that someone has gave you a chance, a chance which made you what you are today! I really believe in working hard and surrounding among amazing people but unfortunately i didnt get any opportunity to be in amazing environments where my passion and capabilities can be tested at the fullest. I\'m going to 3rd year next month and i will be offered an NOC to do an internship by our college , so this is the best time i can work for someone as amazing as swipe.   Here are some questions you can ask:' },
+      { isUser: false, text: 'Thank you so much for taking time to looking at my work for your organization. I have been working for over 3 weeks despite continuous examinations trying to prove my capabilities to get an internship at Swipe.  always wanted to work at a YC startup and after discovering such a startup from hyderabad there is no way i cannot put my blood and sweat to experience working with a startup like yourself. this web app is the proof of my capabilities, responsibiliy and passion towards working at swipe. please give me one opportunity , it always starts with one opportunity just remember that someone has gave you a chance, a chance which made you what you are today! I really believe in working hard and surrounding among amazing people but unfortunately i didnt get any opportunity to be in amazing environments where my passion and capabilities can be tested at the fullest. I\'m going to 3rd year next month and i will be offered an NOC to do an internship by our college , so this is the best time i can work for someone as amazing as swipe.   Here are some questions you can ask:' },
     ];
     setMessages(initialMessages);
   }, []);

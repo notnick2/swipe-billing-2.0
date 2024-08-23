@@ -5,6 +5,7 @@ import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faHeadphones } from '@fortawesome/free-solid-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const SearchInput = () => {
   return (
@@ -36,6 +37,11 @@ const SearchInput = () => {
 
 function Vendors() {
 
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/bfeedback');
+  };
+
   const features = [
     "Manage data with quick vendor uploads",
     "Simplify your vendor relationships",
@@ -53,7 +59,9 @@ function Vendors() {
             <h2 className="text-2xl font-bold text-gray-900">Vendors</h2>
             <div className="space-x-2">
             <SearchInput/>
-              
+            <button className="animated-border-button" onClick={handleClick}>
+                click here
+              </button> 
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8 pr-[200px] pl-[150px] pt-10">

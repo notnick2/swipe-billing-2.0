@@ -4,17 +4,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faHeadphones } from '@fortawesome/free-solid-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom';
-
+import { Link, useNavigate } from 'react-router-dom';
+import "../index.css"
 
 function Invoices() {
 
+  
   const features = [
     "Create purchase invoices & share them with vendors directly",
     "Record purchases to automatically stock-in inventory",
     "Get better data insights to your purchases"
   ];
-
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/bfeedback');
+  };
   return (
     <div className='flex flex-col m-4'>
     <Banner/>
@@ -28,6 +32,9 @@ function Invoices() {
                
                 Document Settings
               </Link>
+              <button className="animated-border-button" onClick={handleClick}>
+                click here
+              </button>
               <Link className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700"  to = {'/bfeedback'}>
                 
                 POS Billing

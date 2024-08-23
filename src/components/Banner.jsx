@@ -1,12 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 function Banner() {
+
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/bfeedback');
+  };
+
   return (
     <div className="bg-[#E6F2FF] py-2 px-6 text-center rounded-md ">
     <p className="text-lg text-blue-700">
       Introducing Swipe AI, AI assistant for your business that understands your business 🌟🌟🌟
-      <Link className="ml-2 font-medium bg-white border-2 border-slate-200 p-1 rounded-3xl" to ={'/swipeAI'}>Try swipe AI now 🚀</Link>
+      <button className="animated-border-button" onClick={handleClick}>
+                  Try swipe AI now 🚀
+              </button>
     </p>
   </div>
   );

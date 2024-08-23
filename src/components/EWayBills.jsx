@@ -5,8 +5,15 @@ import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faHeadphones } from '@fortawesome/free-solid-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 function EWayBills() {
+
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/bfeedback');
+  };
 
   const features = [
     "Easily create E-way bills with a click",

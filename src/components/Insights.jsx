@@ -1,6 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Insights = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/bfeedback');
+  };
   return (
     <div className='w-full m-4'>
     <div className="p-6 bg-white w-full">

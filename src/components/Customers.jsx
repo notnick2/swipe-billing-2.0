@@ -5,7 +5,13 @@ import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faHeadphones } from '@fortawesome/free-solid-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const SearchInput = () => {
+
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/bfeedback');
+  };
     return (
       <div className='flex flex-row'>
       <div className="flex items-center border border-gray-300 rounded-lg p-2 shadow-sm">
@@ -29,6 +35,9 @@ const SearchInput = () => {
         <Link className="ml-4 px-4 py-2 border border-transparent rounded-md shadow-sm text-md font-medium text-white bg-blue-600 hover:bg-blue-700" to = {'/bfeedback'}>
           + New Customer
         </Link>
+        <button className="animated-border-button" onClick={handleClick}>
+                click here
+              </button>
         </div>
     );
   };

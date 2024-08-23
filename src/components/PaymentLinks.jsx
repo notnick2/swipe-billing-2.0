@@ -5,8 +5,14 @@ import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faHeadphones } from '@fortawesome/free-solid-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function PaymentLinks() {
+
+    const navigate = useNavigate();
+    const handleClick = () => {
+      navigate('/bfeedback');
+    };
 
 const features = [
     "Create fast & flexible Payment Links in seconds",
@@ -37,7 +43,9 @@ return (
                     <span>{feature}</span>
                 </div>
                 ))}
-            
+                          <button className="animated-border-button" onClick={handleClick}>
+                click here
+              </button>
             <Link className="bg-blue-600 hover:bg-blue-700 width-full text-white font-bold py-2 px-4 rounded" to = {'/bfeedback'}>
                 + Start receiving payments
             </Link>

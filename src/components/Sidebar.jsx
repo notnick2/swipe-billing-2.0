@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import { FaChevronDown, FaChevronUp, FaShoppingCart, FaFileAlt, FaReceipt, FaBoxes, FaWarehouse, FaCreditCard, FaUsers, FaUserTie, FaChartLine, FaFileInvoiceDollar, FaStore, FaCloudUploadAlt, FaCog, FaQuestionCircle, FaCommentAlt, FaBars, FaMoneyBillWave } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import '../index.css';
-
 const MenuItem = ({ icon, text, hasSubItems = false, isNew = false, isCollapsed, subItems = [] }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+
 
   const toggleSubItems = (e) => {
     if (hasSubItems) {
       setIsOpen(!isOpen);
     } else {
-      // Allow navigation only if there are no sub-items
       return;
     }
-    e.preventDefault(); // Prevent navigation if there are sub-items
+    e.preventDefault(); 
   };
 
   return (
@@ -28,7 +28,7 @@ const MenuItem = ({ icon, text, hasSubItems = false, isNew = false, isCollapsed,
             <Link 
               to={`/${text.toLowerCase().replace(/ /g, '')}`} 
               className="text-gray-700 font-[600] text-[13px] leading-6 font-inter pl-2 pr-1"
-              onClick={toggleSubItems} // Call toggleSubItems to handle sub-items
+              onClick={toggleSubItems}
             >
               {text}
             </Link>
@@ -60,9 +60,11 @@ const MenuItem = ({ icon, text, hasSubItems = false, isNew = false, isCollapsed,
 };
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
+
+
   return (
     <div className={`bg-[#f9f9f9] h-screen ${isOpen ? 'w-1/5' : 'w-12'} transition-all duration-300 ease-in-out flex flex-col pt-2`}>
-      <div className="flex flex-col flex-grow" style={{ height: '80%' }}>
+      <div className="flex flex-col flex-grow" style={{ height: '85%' }}>
         <div className="flex flex-col transparent-container flex-grow overflow-y-auto">
           <MenuItem 
             icon={<FaMoneyBillWave />} 
@@ -90,6 +92,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <MenuItem icon={<FaCog />} text="Settings" isCollapsed={!isOpen} />
           <MenuItem icon={<FaQuestionCircle />} text="Tutorials" isCollapsed={!isOpen} />
           <MenuItem icon={<FaCommentAlt />} text="Feedback" isCollapsed={!isOpen} />
+
     </div>
     <div className='pt-[20vh]'>
 
