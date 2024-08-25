@@ -88,7 +88,7 @@ const AIChat = () => {
         setMessage('');
       } catch (error) {
         console.error('Error:', error);
-        setMessages((prevMessages) => [...prevMessages, { isUser: false, text: 'Oops, something went wrong. Please try again later.' }]);
+        setMessages((prevMessages) => [...prevMessages, { isUser: false, text: 'Oops, something went wrong. Please try again this time it will work promise.' }]);
       } finally {
         setLoading(false);
       }
