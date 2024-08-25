@@ -13,7 +13,7 @@ const Feedback = () => {
   const navigate = useNavigate();
 
   const handleClose = () => {
-    navigate(-1); // This will navigate back to the previous route
+    navigate(-1); 
   };
 
   const handleSubmit = (event) => {
@@ -80,7 +80,7 @@ const Feedback = () => {
             </div>
             {activeTab === 'feedback' && (
               <p className="text-sm text-gray-600 mb-4">
-                      Thank you so much for taking the time to review my work for your organization. I have been working diligently for over three weeks, despite continuous examinations, to prove my capabilities and secure an internship at Swipe. I have always wanted to work at a YC startup, and discovering a startup like Swipe from Hyderabad makes it impossible for me not to invest my utmost effort in experiencing the opportunity to work with you. This web app is proof of my capabilities, responsibility, and passion for working at Swipe. Please give me one opportunity. It all starts with one chance, just remember that someone gave you an opportunity that helped shape who you are today. I truly believe in working hard and being surrounded by amazing people, but unfortunately, I haven't had the chance to be in an environment where my passion and capabilities can be tested to their fullest. I'm going into my third year next month, and I will be given an NOC to do an internship by my college. So, this is the best time for me to work with someone as amazing as Swipe.                <span className='font-semibold'>
+                      Thank you so much for taking the time to review my work for your organization. I have been working diligently for over three weeks, despite continuous examinations, to prove my capabilities and secure an internship at Swipe. I have always wanted to work at a YC startup, and discovering a startup like Swipe from Hyderabad makes it impossible for me not to invest my utmost effort in experiencing the opportunity to work with you. This web app is proof of my capabilities and passion for working at Swipe. Please give me one opportunity. It all starts with one chance, just remember that someone gave you an opportunity that helped shape who you are today. I truly believe in working hard and being surrounded by amazing people, but unfortunately, I haven't had the chance to be in an environment where my passion and capabilities can be tested to their fullest. I'm going into my third year next month, and I will be given an NOC to do an internship by my college. So, this is the best time for me to work with someone as amazing as Swipe.                <span className='font-semibold'>
                     Please checkout <Link to="/swipeAI" className='underline'>SwipeAI</Link> It is amazing.
                 </span>
               </p>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ChatGPTResponse = ({ response }) => {
   const [typedResponse, setTypedResponse] = useState('');
@@ -32,26 +33,28 @@ const ChatGPTResponse = ({ response }) => {
 };
 
 const AIChat = () => {
+  const navigate = useNavigate(); // Hook for navigation
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const questionBuffer = [
     "cash in and cash out for this month",
-    "how many products did we sold this month", "how many active customers do we have", "What is the value of total pending invoices", 
-    "total sales and expenses for this month", "what were the top categories by sales we had ?", 
-    "what was the top best selling product by sales", "do we have any low inventory products? ", "what were the peek performing days",
-    "who is our top customer by sales", "how much is our current recurring revenue","list out all the vendors that we have", "generate a price quotation for 100 macbook pro"
+    "how many products did we sold this month",
+    "how many active customers do we have",
+    "What is the value of total pending invoices",
+    "total sales and expenses for this month",
+    "what were the top categories by sales we had ?",
+    "what was the top best selling product by sales",
+    "do we have any low inventory products?",
+    "what were the peak performing days",
+    "who is our top customer by sales",
+    "how much is our current recurring revenue",
+    "list out all the vendors that we have",
+    "generate a price quotation for 100 macbook pro"
   ];
 
   const [displayedQuestions, setDisplayedQuestions] = useState(questionBuffer.slice(0, 5));
-
-  useEffect(() => {
-    const initialMessages = [
-      { isUser: false, text: 'Thank you so much for taking the time to review my work for your organization. I have been working diligently for over three weeks, despite continuous examinations, to prove my capabilities and secure an internship at Swipe. I have always wanted to work at a YC startup, and discovering a startup like Swipe from Hyderabad makes it impossible for me not to invest my utmost effort in experiencing the opportunity to work with you. This web app is proof of my capabilities, responsibility, and passion for working at Swipe. Please give me one opportunity. It all starts with one chance—just remember that someone gave you an opportunity that helped shape who you are today. I truly believe in working hard and being surrounded by amazing people, but unfortunately, I haven’t had the chance to be in an environment where my passion and capabilities can be tested to their fullest. I\'m going into my third year next month, and I will be given an NOC to do an internship by my college. So, this is the best time for me to work with someone as amazing as Swipe. Here are some questions you can ask:' },
-    ];
-    setMessages(initialMessages);
-  }, []);
 
   const handleQuestionClick = async (question) => {
     handleSubmit(question);
@@ -102,10 +105,21 @@ const AIChat = () => {
     scrollToBottom();
   }, [messages]);
 
+  const handleInitialMessageClick = () => {
+    navigate('/bfeedback'); // Redirect to /feedback
+  };
+
   return (
     <div className="bg-[#f9f9f9] flex flex-col w-full justify-end">
       <div className="w-full bg-[#f9f9f9] rounded px-8 pt-6 pb-8 mb-4">
         <div className="h-[500px] overflow-y-auto transparent-container p-3" id="scrollContainer">
+          <div
+            className="bg-gray-200 px-4 py-2 rounded-lg max-w-[70%] text-gray-900 cursor-pointer"
+            onClick={handleInitialMessageClick}
+            dangerouslySetInnerHTML={{
+              __html: `Thank you so much for checking out SwipeAI it truly means a lot to me, especially considering the effort I put into building it. Feel free to ask SwipeAI any questions related to Swipe or business data. I hope you'll find its responses satisfying. Your feedback is invaluable to me, and I kindly request you to share your thoughts <span style="font-weight: 600; text-decoration: underline;">here</span>. To get you started, here are a few questions you might want to ask SwipeAI`
+            }}
+          />
           {messages.map((msg, index) => (
             <div
               key={index}
