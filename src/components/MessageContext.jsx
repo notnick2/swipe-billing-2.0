@@ -15,5 +15,4 @@ export const MessageProvider = ({ children }) => {
   );
 };
 
-// Custom hook to use the MessageContext
 export const useMessages = () => useContext(MessageContext);

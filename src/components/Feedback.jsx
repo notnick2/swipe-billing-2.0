@@ -13,7 +13,7 @@ const Feedback = () => {
   const navigate = useNavigate();
 
   const handleClose = () => {
-    navigate(-1); // This will navigate back to the previous route
+    navigate(-1); 
   };
 
   const handleSubmit = (event) => {
