@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+import { Analytics } from "@vercel/analytics/react"
 
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
@@ -85,6 +86,7 @@ function Layout() {
   return (
     <div className="flex flex-col h-screen">
       <Header />
+      <Analytics />
       <div className="flex flex-1 overflow-hidden bg-[#f9f9f9]">
         <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
           <Outlet />
